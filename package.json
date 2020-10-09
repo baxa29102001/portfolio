@@ -6,7 +6,7 @@
     "scripts": {
         "start": "cross-env NODE_ENV=prod PORT=8080 node index",
         "client": "npm run start --prefix client",
-        "heroku-postbuild": "npm run build --prefix client",
+        "build": "npm install --prefix client && npm run build --prefix client",
         "dev": "cross-env NODE_ENV=dev concurrently \"nodemon index\" \"npm run client\""
     },
     "engines": {
