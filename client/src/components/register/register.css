@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    312deg,
+    rgba(238, 174, 202, 1) 31%,
+    rgba(110, 241, 224, 1) 66%
+  );
+  position: relative;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: white;
+  animation: animated 10s linear infinite;
+}
+/* .sloy{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: black;
+    opacity: 0.4;
+} */
+.a {
+  text-decoration: none;
+}
+.question {
+  text-align: center;
+  padding: 10px;
+}
+.title {
+  color: rgba(110, 241, 224, 1);
+  font-size: 25px;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  font-family: cursive;
+}
+.title::after {
+  content: '';
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  /* bottom: 0;
+    right: 0; */
+  left: 0;
+  display: block;
+  background: linear-gradient(
+    312deg,
+    rgba(238, 174, 202, 1) 31%,
+    rgba(110, 241, 224, 1) 66%
+  );
+  z-index: -2;
+  /* border-radius: 10px; */
+}
+.title::before {
+  content: '';
+  width: 50%;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  /* bottom: 0;
+    right: 0; */
+  left: 170px;
+  display: block;
+  background: white;
+  border-radius: 2px;
+}
+
+.form {
+  width: 50%;
+  height: 60%;
+  margin: 90px auto;
+  padding: 2px 2px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.active {
+  background-color: rgba(110, 241, 224, 1);
+}
+.auto li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.react-tabs__tab--selected {
+  background: linear-gradient(
+    312deg,
+    rgba(238, 174, 202, 1) 31%,
+    rgba(110, 241, 224, 1) 66%
+  ) !important;
+  border-color: none !important;
+  border: 0 !important;
+  color: white !important;
+  border-radius: 5px !important;
+}
+.react-tabs__tab-list {
+  border-bottom: 0 !important;
+  width: 30.5%;
+  margin: 0 0 -26px;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+}
+.input-email {
+  width: 95%;
+  height: 40px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.input-email input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 2px solid silver;
+  outline: none;
+  font-size: 16px;
+}
+
+.input-email input:focus ~ label,
+.input-email input:valid ~ label {
+  transform: translateY(-20px);
+}
+.input-email label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.paskichiziq {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+}
+.paskichiziq::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    312deg,
+    rgba(110, 241, 224, 1) 31%,
+    rgba(238, 174, 202, 1) 66%
+  );
+  transform: scaleX(0);
+}
+.input-email input:focus ~ .paskichiziq::before,
+.input-email input:valid ~ .paskichiziq::before {
+  transform: scaleX(1);
+}
+.wrapper .input-name {
+  width: 95%;
+  height: 40px;
+  position: relative;
+  margin-top: 10px;
+}
+.wrapper .input-name input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 2px solid silver;
+  outline: none;
+  font-size: 16px;
+}
+.input-name input:focus ~ label,
+.input-name input:valid ~ label {
+  transform: translateY(-20px);
+}
+.wrapper .input-name label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.wrapper .input-name .underline {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+}
+
+.input-name .underline::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    312deg,
+    rgba(238, 174, 202, 1) 31%,
+    rgba(110, 241, 224, 1) 66%
+  );
+  transform: scaleX(0);
+}
+
+.input-name input:focus ~ .underline::before,
+.input-name input:valid ~ .underline::before {
+  transform: scaleX(1);
+}
+
+.wrapper .input-password {
+  width: 95%;
+  height: 40px;
+  position: relative;
+  margin-top: 35px;
+}
+.wrapper .input-password input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 2px solid silver;
+  outline: none;
+  font-size: 16px;
+}
+.input-password input:focus ~ label,
+.input-password input:valid ~ label {
+  transform: translateY(-20px);
+}
+
+.wrapper .input-password label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.wrapper .input-password .underline {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+}
+
+.input-password .underline::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    312deg,
+    rgba(110, 241, 224, 1) 31%,
+    rgba(238, 174, 202, 1) 66%
+  );
+  transform: scaleX(0);
+}
+
+.input-password input:focus ~ .underline::before,
+.input-password input:valid ~ .underline::before {
+  transform: scaleX(1);
+}
+
+.button {
+  width: 50%;
+  height: 44px;
+  margin: 15px 145px;
+}
+.button button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 5px;
+  font-family: cursive;
+  background: linear-gradient(
+    312deg,
+    rgba(238, 174, 202, 1) 31%,
+    rgba(110, 241, 224, 1) 66%
+  );
+  cursor: pointer;
+  animation: button-animated 5s linear infinite;
+}
+.button button:focus {
+  outline: none;
+}
+.box1 {
+  position: absolute;
+  bottom: 100px;
+  right: 90px;
+  transform: rotate(-50deg);
+  animation-delay: 3s;
+}
+.box2 {
+  position: absolute;
+  top: 400px;
+  left: 200px;
+  transform: rotate(50deg);
+}
+
+.box3 {
+  transform: translate(500px, 100px) rotate(50deg);
+}
+@keyframes animated {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-400px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes button-animated {
+  0% {
+    background: linear-gradient(
+      312deg,
+      rgba(238, 174, 202, 1) 31%,
+      rgba(110, 241, 224, 1) 66%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      312deg,
+      rgba(110, 241, 224, 1) 31%,
+      rgba(241, 110, 218, 1) 56%
+    );
+  }
+}

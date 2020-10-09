@@ -1,0 +1,29 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "cross-env NODE_ENV=prod PORT=8080 node index",
+        "client": "npm run start --prefix client",
+        "build": "npm run build --prefix client",
+        "dev": "cross-env NODE_ENV=dev concurrently \"nodemon index\" \"npm run client\""
+    },
+    "engines": {
+        "node": "12.18.1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "concurrently": "^5.3.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.10.2"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.2",
+        "nodemon": "^2.0.4"
+    }
+}
