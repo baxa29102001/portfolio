@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "cross-env NODE_ENV=prod PORT=8080 node index",
+        "start": "cross-env NODE_ENV=prod node index",
         "client": "npm run start --prefix client",
         "build": "npm install --prefix client && npm run build --prefix client",
         "dev": "cross-env NODE_ENV=dev concurrently \"nodemon index\" \"npm run client\""
